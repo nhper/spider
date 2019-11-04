@@ -7,7 +7,7 @@ class ShangbiaowangSpider(scrapy.Spider):
     name = 'shangbiaowang'
     def start_requests(self):
         url = 'http://wsgg.sbj.cnipa.gov.cn:9080/tmann/annInfoView/annSearchDG.html'
-        annNum = 1669
+        annNum = 1
         while True:
             data = {
                 'page': '1',
@@ -34,7 +34,7 @@ class ShangbiaowangSpider(scrapy.Spider):
                 'appDateEnd': '',
                 'agentName': '',
             }
-            annNum-=1
+            annNum+=1
             yield scrapy.FormRequest(url=url,formdata=data)
     def parse(self, response):
         item = ShangbiaoItem()
