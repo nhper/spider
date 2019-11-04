@@ -11,7 +11,7 @@ class ShangbiaowangSpider(scrapy.Spider):
         while True:
             data = {
                 'page': '1',
-                'rows': '1000000',
+                'rows': '100000',
                 'annNum': str(annNum),
                 'annType': '',
                 'tmType': '',
