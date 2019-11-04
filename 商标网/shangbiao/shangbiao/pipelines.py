@@ -6,7 +6,7 @@
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
 import MySQLdb
-conn = MySQLdb.connect(host="10.103.86.62",port=3306,user="root",password="123456",
+conn = MySQLdb.connect(host="localhost",port=3306,user="root",password="123456",
                        db = "spider",charset="utf8"
                        )
 cur = conn.cursor()
